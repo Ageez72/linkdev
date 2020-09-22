@@ -1,0 +1,47 @@
+@import "../../utilities";
+.contact {
+  background-color: $grayColor;
+  .links {
+    a {
+      color: $txtGrayColor;
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+  .subscribe-title {
+    margin-top: 30px;
+  }
+  form {
+    display: flex;
+    input {
+      border-radius: 0;
+      font-size: 14px;
+      border: none;
+      padding: 15px 0 15px 5px;
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+    input[type="text"] {
+      width: 70%;
+    }
+    input[type="submit"] {
+      width: 30%;
+      background-color: $mainColor;
+      color: $white;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .contact {
+    .row {
+      margin: 0;
+    }
+    .row-cols-3 > * {
+      min-width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+}

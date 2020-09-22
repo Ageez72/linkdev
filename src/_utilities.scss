@@ -1,0 +1,113 @@
+$mainColor: #008795;
+$greenColor: #8ec043;
+$grayColor: #d9d9d9;
+$txtGrayColor: #4a4a4a;
+$darkBlue: #168d91;
+$lightBlue: #61aeb9;
+$white: #fff;
+body {
+}
+.container-fluid,
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.subHead {
+  font-family: "Segoe UI";
+  font-size: 36px;
+}
+.mainColor {
+  color: $mainColor;
+  a {
+    color: $mainColor;
+  }
+}
+p {
+  font-family: "Segoe UI";
+  font-size: 18px;
+}
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+.btn {
+  padding: 8px 35px;
+  border-radius: 0;
+  font-size: 18px;
+}
+.pt-6 {
+  padding-top: 5rem;
+}
+.pb-6 {
+  padding-bottom: 5rem;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.32);
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.icon-scroll {
+  width: 40px;
+  height: 60px;
+  top: 50%;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 25px;
+  margin: auto;
+}
+.icon-scroll:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  top: 8px;
+  border-radius: 4px;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+  animation-name: scroll;
+  display: inline-block;
+}
+.clear {
+  height: 0;
+  clear: both;
+}
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(46px);
+    transform: translateY(46px);
+  }
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(46px);
+    transform: translateY(46px);
+  }
+}
+.sticky {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 999 !important;
+  .navbar-brand {
+    display: block;
+    img {
+      height: 50px;
+    }
+  }
+}

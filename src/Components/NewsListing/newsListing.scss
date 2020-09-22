@@ -1,0 +1,116 @@
+@import "../../utilities";
+
+.newsListing {
+  padding-top: 60px;
+  .breadcrumb-container {
+    border-bottom: 1px solid #ccc;
+    .container {
+      display: flex;
+      align-items: center;
+    }
+    .breadcrumb-nav {
+      display: inline-block;
+      width: 75%;
+    }
+    .breadcrumb {
+      background-color: transparent;
+      margin-bottom: 0;
+      font-size: 0.8em;
+      .breadcrumb-item {
+        &:first-of-type::before {
+          content: "";
+        }
+        &::before {
+          content: url("/imgs/newsListing/arrow.png");
+          margin-top: 2px;
+        }
+        a {
+          color: #959595;
+        }
+        &.active {
+          color: $mainColor;
+        }
+      }
+    }
+    .sources {
+      display: inline-block;
+      width: 25%;
+      text-align: right;
+      img {
+        cursor: pointer;
+        &:nth-of-type(2) {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+  .section-title {
+    padding-left: 10px;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    select {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 25%;
+      padding-bottom: 0.7rem !important;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+  .searchContainer {
+    width: 70%;
+    float: right;
+    input,
+    button {
+      height: 41px;
+    }
+    .input-group-append {
+      margin-left: 2.5px;
+      button {
+        background-color: $mainColor;
+        line-height: 21px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+  .col {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .newsContainer {
+    text-align: center;
+  }
+}
+@media (max-width: 599px) {
+  .newsListing {
+    .section-title {
+      select {
+        width: auto;
+      }
+    }
+    .searchContainer {
+      width: 90%;
+      float: none;
+      margin-top: 15px;
+    }
+    .breadcrumb-container {
+      .container {
+        display: block;
+      }
+      .breadcrumb-nav {
+        display: inline-block;
+        width: 100%;
+      }
+      .sources {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-left: 15px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

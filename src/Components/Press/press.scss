@@ -1,0 +1,69 @@
+@import "../../utilities";
+.news {
+  .col {
+    padding: 0;
+    display: inline-block;
+    width: 280px;
+    height: 393px;
+    .card {
+      position: relative;
+      overflow: hidden;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      height: 370px;
+      * {
+        color: $white;
+      }
+      .bgImg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        img {
+          height: 100%;
+          transform: scale(1.2);
+        }
+      }
+      .card-body {
+        position: relative;
+        z-index: 1;
+        padding: 0 10px 45px;
+        transition: all 0.4s ease-in-out;
+        text-align: left;
+        height: 370px;
+        .number {
+          font-size: 60px;
+          margin-bottom: -15px;
+        }
+        .month {
+          font-size: 30px;
+          font-weight: bold;
+        }
+        .card-text {
+          font-size: 16px;
+        }
+        a {
+          background: #a8a9ad;
+          border: 2px solid #a8a9ad;
+          font-family: "Calibri";
+          font-size: 16px;
+          transition: all 0.4s ease-in-out;
+          padding: 10px 20px;
+          position: absolute;
+          bottom: 30px;
+        }
+      }
+      &:hover {
+        .card-body {
+          background-color: $greenColor;
+        }
+        button {
+          background-color: transparent;
+          border-color: $white;
+        }
+      }
+    }
+  }
+}

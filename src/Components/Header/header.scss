@@ -1,0 +1,76 @@
+@import "../../utilities";
+
+header {
+  .whiteBG {
+    background-color: $white;
+  }
+  .register,
+  .langs {
+    font-size: 0.75em;
+    a {
+      color: $mainColor;
+    }
+  }
+  .register {
+    font-family: "Segoe UI";
+    margin-bottom: 30px;
+    .wall {
+      margin: 0 8px 0 5px;
+    }
+  }
+  .langs {
+    font-family: "Montserrat";
+    color: $mainColor;
+    .selectedLang {
+      background-color: $mainColor;
+      padding: 2px;
+      border-radius: 100px;
+      margin-right: 5px;
+      margin-left: 5px;
+      a {
+        color: $white;
+      }
+    }
+    .ar {
+      a {
+        color: $txtGrayColor;
+      }
+    }
+    .wall {
+      margin: 0 5px;
+      font-size: 1.3em;
+    }
+    .big-a {
+      font-size: 1.25em;
+    }
+    .sm-a {
+      font-size: 0.9em;
+    }
+  }
+  &.sticky {
+    transition: all 0.5s ease-in-out;
+    .logo {
+      height: 50px;
+    }
+    .register {
+      margin-bottom: 10px;
+    }
+    .row {
+      align-items: center;
+      > div {
+        padding: 10px 0 !important;
+      }
+    }
+  }
+}
+.nav-section {
+  position: absolute;
+  z-index: 22;
+  width: 100%;
+  background: #f0eeecf2;
+}
+@media (max-width: 991px) {
+  .whiteBG {
+    display: none;
+  }
+}

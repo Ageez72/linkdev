@@ -1,0 +1,82 @@
+@import "../../utilities";
+.investment {
+  background-image: url("/imgs/investment/medical.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  * {
+    color: $white;
+  }
+  .container-fluid {
+    position: relative;
+    z-index: 2;
+    .skewBoxs {
+      text-align: center;
+      > div {
+        position: relative;
+        left: 50%;
+        transform: translateX(-43%);
+      }
+      .col {
+        transform: rotate(-45deg);
+        width: 20%;
+        display: inline-block;
+        .box {
+          border: 2px solid $white;
+          margin-bottom: 12px;
+          width: 130px;
+          height: 130px;
+          text-align: center;
+          transition: all 0.4s ease-in-out;
+          &:hover {
+            background-color: $mainColor;
+            border: 2px solid $mainColor;
+          }
+          .box-items {
+            transform: translate(0px, 7px) rotate(45deg);
+            .box-icon {
+              img {
+                height: 40px;
+              }
+            }
+            .box-title {
+              margin: 10px 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .investment {
+    .container-fluid {
+      .skewBoxs {
+        > div {
+          position: relative;
+          left: auto;
+          transform: none;
+        }
+        .col {
+          transform: none;
+          width: auto;
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          .box {
+            .box-items {
+              transform: none;
+              .box-icon {
+                margin-top: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "../../utilities";
+@import "../../fonts";
+footer {
+  background-color: $mainColor;
+  padding: 20px 0;
+  * {
+    color: $white;
+    font-size: 14px;
+  }
+  .row {
+    margin: 0;
+    align-items: center;
+    .col-links {
+      width: 70%;
+    }
+    .col-copy {
+      width: 30%;
+    }
+  }
+}
+@media (max-width: 992px) {
+  footer {
+    .row {
+      flex-direction: column;
+      text-align: center;
+      .col-links {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .col-copy {
+        width: 100%;
+      }
+    }
+  }
+}

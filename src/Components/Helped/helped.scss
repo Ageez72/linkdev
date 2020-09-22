@@ -1,0 +1,121 @@
+@import "../../utilities";
+.helping {
+  .carousel {
+    .btn-floating {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      overflow: hidden;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      margin: 10px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      padding: 0;
+      text-align: center;
+      line-height: 45px;
+      border: 1px solid $mainColor;
+      &.prev {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &.next {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &-inner {
+      width: 80%;
+      margin: auto;
+      .carousel-item {
+        height: auto;
+        .card {
+          border: none;
+          .card-img-top {
+            background: #008795;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            margin: auto;
+            line-height: 95px;
+            text-align: center;
+            border: 7px solid #fff;
+            position: relative;
+            z-index: 12;
+            img {
+              width: 70px;
+            }
+          }
+          .card-body {
+            background-image: url("/imgs/help/cardBack.png");
+            background-size: cover;
+            background-position-x: 40%;
+            height: 400px;
+            text-align: center;
+            padding-top: 70px;
+            margin-top: -50px;
+            position: relative;
+            overflow: hidden;
+            * {
+              color: $white;
+            }
+            .cardBG {
+              position: relative;
+              z-index: 11;
+            }
+            .card-title {
+              margin-bottom: 50px;
+            }
+            .number {
+              font-size: 4em;
+              font-weight: bold;
+              font-family: "Segoe UI";
+              margin-bottom: -10px;
+            }
+            .degree {
+              margin-bottom: 6px;
+              font-size: 24px;
+            }
+            p {
+              font-size: 18px;
+            }
+            .overlay {
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .helping {
+    .carousel {
+      padding-bottom: 4.5rem;
+      .btn-floating {
+        &.prev {
+          position: absolute;
+          left: 65px;
+          top: auto;
+          transform: translateY(0%);
+          bottom: 0;
+        }
+        &.next {
+          position: absolute;
+          right: 65px;
+          top: auto;
+          transform: translateY(0%);
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
